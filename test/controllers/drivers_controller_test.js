@@ -18,6 +18,9 @@ describe('Drivers controller', () => {
           });
       });
     });
-    
+  });
+
+  it('PUT to /api/drivers/:id edits an existing driver', done => {
+    con
   });
 });
