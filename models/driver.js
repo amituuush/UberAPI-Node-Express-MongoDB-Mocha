@@ -1,4 +1,4 @@
-const mongoose = require('mognoose');
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const DriverSchema = new Schema({
@@ -12,6 +12,6 @@ const DriverSchema = new Schema({
   }
 });
 
-const Driver = mongoose.Model('driver', DriverSchema);
+const Driver = mongoose.model('driver', DriverSchema);
 
 module.exports = Driver;
