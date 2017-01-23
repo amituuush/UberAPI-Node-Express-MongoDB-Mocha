@@ -31,13 +31,24 @@ describe('Drivers controller', () => {
             .then(driver => {
               assert(driver.driving === true);
               done();
-          })
+          });
         });
     });
   });
 
   it('DELETE to /api/drivers/:id deletes an existing driver', done => {
-    
+    const driver = new Driver({ email: 't@t.com'});
+    driver.save().then(() => {
+      request(app)
+        .delete(`/api/drivers/${driver._id}`)
+        .end(() => {
+          Driver.findOne({ email: 'test@test.com' })
+            .then(driver => {
+              assert(driver === null);
+              done();
+            })
+        })
+    });
   });
 
 });
