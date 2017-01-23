@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon --exec 'mocha --recursive -R min1"
+    "test": "nodemon --exec 'mocha --recursive -R min'"
   },
   "author": "",
   "license": "ISC",
